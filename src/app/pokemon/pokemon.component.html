@@ -1,0 +1,12 @@
+<h2>Pokemon page - linked to backend</h2>
+<h3>Trainers:</h3>
+<ul class="trainers">
+  <li *ngFor="let trainer of trainers()">
+    <span>{{ trainer.name }}</span>
+  </li>
+</ul>
+<div>{{ trainer().name }}</div>
+<h3>Pokemons:</h3>
+<p>Create pokemon</p>
+<input #searchBox id="search-box" (input)="onInput(searchBox.value)" />
+<button (click)="createTrainer()">Create Trainer</button>

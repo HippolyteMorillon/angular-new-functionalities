@@ -1,3 +1,4 @@
+import { signal } from '@angular/core';
 import { Hero } from '../interfaces/hero';
 
 export const HEROES: Hero[] = [
@@ -11,3 +12,5 @@ export const HEROES: Hero[] = [
   { id: 19, name: 'Magma' },
   { id: 20, name: 'Tornado' },
 ];
+
+export const HEROES_SIGNAL = signal(HEROES);
