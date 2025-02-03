@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +27,6 @@ import { PokemonComponent } from './pokemon/pokemon.component';
   ],
   bootstrap: [AppComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [provideHttpClient()],
+  providers: [provideHttpClient(), provideClientHydration(withEventReplay())],
 })
 export class AppModule {}
