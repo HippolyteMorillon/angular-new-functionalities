@@ -5,4 +5,8 @@
   </a>
 </div>
 
-<app-hero-search></app-hero-search>
+@defer (on idle) {
+<app-hero-search />
+} @placeholder {
+<p>Hello !</p>
+}
